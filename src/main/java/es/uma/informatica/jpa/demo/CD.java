@@ -20,6 +20,10 @@ public class CD implements Serializable {
 	private String title;
 	private Float price;
 	private String description;
+	private String musicCompany;
+	private Integer numberOfCDs;
+	private Float totalDuration;
+	private String gender;
 	
 	@ManyToMany(mappedBy = "appearsOnCDs")
 	private List<Artist> createdByArtists;
@@ -28,7 +32,57 @@ public class CD implements Serializable {
 	
 	public CD() {
 		super();
-	}   
+	}
+	
+	
+
+	public String getMusicCompany() {
+		return musicCompany;
+	}
+
+
+
+	public void setMusicCompany(String musicCompany) {
+		this.musicCompany = musicCompany;
+	}
+
+
+
+	public Integer getNumberOfCDs() {
+		return numberOfCDs;
+	}
+
+
+
+	public void setNumberOfCDs(Integer numberOfCDs) {
+		this.numberOfCDs = numberOfCDs;
+	}
+
+
+
+	public Float getTotalDuration() {
+		return totalDuration;
+	}
+
+
+
+	public void setTotalDuration(Float totalDuration) {
+		this.totalDuration = totalDuration;
+	}
+
+
+
+	public String getGender() {
+		return gender;
+	}
+
+
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+
 
 	public List<Artist> getCreatedByArtists() {
 		return createdByArtists;
