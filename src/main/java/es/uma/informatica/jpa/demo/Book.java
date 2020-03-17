@@ -7,8 +7,6 @@ import javax.persistence.CollectionTable;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
 /**
  * Entity implementation class for Entity: Book
@@ -16,14 +14,9 @@ import javax.persistence.Id;
  */
 @Entity
 
-public class Book implements Serializable {
+public class Book extends Item implements Serializable {
 
 	   
-	@Id @GeneratedValue
-	private Long id;
-	private String title;
-	private Float price;
-	private String description;
 	private String isbn;
 	private Integer nbOfPage;
 	private Boolean illustrations;
@@ -43,34 +36,6 @@ public class Book implements Serializable {
 
 	public Book() {
 		super();
-	}   
-	public Long getId() {
-		return this.id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}   
-	public String getTitle() {
-		return this.title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}   
-	public Float getPrice() {
-		return this.price;
-	}
-
-	public void setPrice(Float price) {
-		this.price = price;
-	}   
-	public String getDescription() {
-		return this.description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
 	}   
 	public String getIsbn() {
 		return this.isbn;
