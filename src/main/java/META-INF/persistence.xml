@@ -4,6 +4,8 @@
 		<class>es.uma.informatica.jpa.demo.Book</class>
 		<class>es.uma.informatica.jpa.demo.Customer</class>
 		<class>es.uma.informatica.jpa.demo.Address</class>
+		<class>es.uma.informatica.jpa.demo.Artist</class>
+		<class>es.uma.informatica.jpa.demo.CD</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sii"/>
 			<property name="javax.persistence.jdbc.user" value="siiuser"/>
