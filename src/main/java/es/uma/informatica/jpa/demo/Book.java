@@ -1,12 +1,14 @@
 package es.uma.informatica.jpa.demo;
 
 import java.io.Serializable;
-import java.lang.Boolean;
-import java.lang.Float;
-import java.lang.Integer;
-import java.lang.Long;
-import java.lang.String;
-import javax.persistence.*;
+import java.util.List;
+
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  * Entity implementation class for Entity: Book
@@ -25,6 +27,18 @@ public class Book implements Serializable {
 	private String isbn;
 	private Integer nbOfPage;
 	private Boolean illustrations;
+	@ElementCollection
+	@CollectionTable(name = "TAG")
+	@Column(name = "VALUE")
+	private List<String> tags;
+	
+	public List<String> getTags() {
+		return tags;
+	}
+	public void setTags(List<String> tags) {
+		this.tags = tags;
+	}
+
 	private static final long serialVersionUID = 1L;
 
 	public Book() {
