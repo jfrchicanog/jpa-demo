@@ -1,9 +1,10 @@
 package es.uma.informatica.jpa.demo;
 
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Customer {
@@ -15,7 +16,8 @@ public class Customer {
 	private String email;
 	private String phoneNumber;
 	
-	@Embedded
+	@OneToOne
+	@JoinColumn(name = "address")
 	private Address address;
 
 	public Long getId() {

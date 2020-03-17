@@ -3,6 +3,7 @@
 	<persistence-unit name="jpa.demo" transaction-type="RESOURCE_LOCAL">
 		<class>es.uma.informatica.jpa.demo.Book</class>
 		<class>es.uma.informatica.jpa.demo.Customer</class>
+		<class>es.uma.informatica.jpa.demo.Address</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sii"/>
 			<property name="javax.persistence.jdbc.user" value="siiuser"/>

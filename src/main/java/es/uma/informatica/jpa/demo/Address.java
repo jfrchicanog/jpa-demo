@@ -1,16 +1,29 @@
 package es.uma.informatica.jpa.demo;
 
-import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-@Embeddable
+@Entity
 public class Address {
 	
+	@Id @GeneratedValue
+	private Long id;
 	private String street1;
 	private String street2;
 	private String city;
 	private String state;
 	private String zipcode;
 	private String country;
+	
+	
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getStreet1() {
 		return street1;
 	}
