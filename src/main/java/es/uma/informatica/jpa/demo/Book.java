@@ -3,10 +3,10 @@ package es.uma.informatica.jpa.demo;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.CollectionTable;
-import javax.persistence.Column;
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
+import jakarta.persistence.CollectionTable;
+import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
 
 /**
  * Entity implementation class for Entity: Book
@@ -22,7 +22,7 @@ public class Book extends Item implements Serializable {
 	private Boolean illustrations;
 	@ElementCollection
 	@CollectionTable(name = "TAG")
-	@Column(name = "VALUE")
+	@Column(name = "VAL")
 	private List<String> tags;
 	
 	public List<String> getTags() {

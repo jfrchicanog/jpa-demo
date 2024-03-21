@@ -3,8 +3,8 @@ package es.uma.informatica.jpa.demo;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
 
 /**
  * Entity implementation class for Entity: CD
